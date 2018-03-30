@@ -1,24 +1,27 @@
 window.onload = function(){
 
     var dirt = document.getElementsByClassName('dirt');
-
+    var resultDispay = document.getElementById('result');
     var sound = document.getElementById("sound");
     var grid = document.getElementById("dirtbox");
-    
+    var score = "0";   
 
     for(let i = 0; i < dirt.length; i++){
         dirt[i].addEventListener("click", function(){
                 if (dirt[i].innerHTML){
                     sound.play();
                     dirt[i].innerHTML = "";
+                    score++;
                 } else {
                     console.log("nothing is in there");
                 }
+                console.log(score)
+                resultDispay.innerHTML = "Score:" + score;
             });
         };
+    
 
-
-setInterval(function setMole(){
+var interval = setInterval(function setMole(){
     var mole = document.createElement("div");
     mole.setAttribute("id", "mole");
     var randInt = Math.floor(Math.random() * Math.floor(dirt.length));
@@ -28,3 +31,4 @@ setInterval(function setMole(){
         console.log("There are too many moles");
     }
 },3000)};
+
