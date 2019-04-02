@@ -41,15 +41,13 @@
     width:100%;
     
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     
     color:#313131;
     font-size:45px;
     font-weight: bold;
     position: absolute;
     -webkit-animation:colorchange 2s infinite alternate;
-    
-    
   }
 
   @keyframes colorchange {
